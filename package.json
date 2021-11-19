@@ -1,0 +1,39 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.js",
+  "devDependencies": {
+    "@prettier/plugin-xml": "^1.0.2",
+    "@types/browser-sync": "^2.26.2",
+    "@types/gulp": "^4.0.9",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-cssimport": "^7.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.3.7",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "node-sass": "^4.14.0",
+    "prettier": "^2.3.2"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "start": "gulp",
+    "format": "prettier \"./src/**/*.{html,css,scss,svg}\" --write",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{html,css,scss,svg}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "git": "^0.1.3"
+  }
+}
